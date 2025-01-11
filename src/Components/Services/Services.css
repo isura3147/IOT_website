@@ -1,0 +1,148 @@
+.services-container {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 2rem;
+    scroll-margin-top: 40px;
+}
+
+.services-title {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.services-underline {
+    width: 100px;
+    height: 4px;
+    background-color: #ffd700;
+    margin: 0 auto 3rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #6F8FAF;
+}
+
+.service-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+    flex-grow: 1;
+}
+
+.see-more-btn {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .service:hover {
+        transform: translateY(-5px);
+    }
+
+    .service img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    .service-inner {
+        padding: 0;
+    }
+
+    .service-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .service-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+        margin-bottom: 1rem;
+    }
+
+    .see-more-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #ffd700;
+        cursor: pointer;
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+        text-align: center;
+        transition: color 0.3s ease;
+        margin-top: auto;
+    }
+
+    .see-more-btn:hover {
+        color: #fff;
+    }
+}

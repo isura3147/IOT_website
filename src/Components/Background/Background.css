@@ -1,0 +1,122 @@
+.video-background-holder {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 110vh; /* Full viewport height */
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Add a darker overlay */
+  z-index: 1;
+}
+
+.video-fluid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+  
+  
+}
+
+.background-text {
+  font-size: 3.5rem;
+  font-weight:600;
+  position: relative;
+  margin: 55px;
+}
+
+.lead{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.animated-words {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 60px;
+  color: #6B879A;
+  height: 60px; /* Set height for smoother transitions */
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.animated-words span {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px); /* Start position below */
+  animation: fadeInOutScale 3s ease-in-out infinite;
+  margin-bottom: 20px;
+  margin-top: 150px;
+  
+}
+
+.btn-secondary {
+  margin-top: 150px;
+}
+
+
+
+/* Keyframes for fade-in, scaling, and translation */
+@keyframes fadeInOutScale {
+  0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8); /* Start with scale down and move up */
+  }
+  25% {
+      opacity: 1;
+      transform: translateY(0) scale(1); /* Scale up and move to original position */
+  }
+  50% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0) scale(1); /* Hold position and size */
+  }
+  75% {
+      opacity: 1;
+      transform: translateY(0) scale(1); /* Still visible */
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8); /* Fade out and move down */
+  }
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .background-text {
+    font-size: 1.8rem;
+  }
+  .animated-words {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .background-text {
+    font-size: 1.5rem;
+  }
+  .animated-words {
+    font-size: 2rem;
+  }
+}
